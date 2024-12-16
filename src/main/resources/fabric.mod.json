@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "join-message",
+	"version": "${version}",
+	"name": "Join Message",
+	"description": "Sends a message to players joining the server.",
+	"authors": [
+		"Samotage820"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/Samotage820/minecraft-join-message"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/join-message/icon.png",
+	"environment": "server",
+	"entrypoints": {
+		"main": [
+			"com.sam.joinmessage.JoinMessage"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
