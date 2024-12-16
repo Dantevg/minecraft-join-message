@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "join-message",
-	"version": "0.1.0",
+	"version": "${version}",
 	"name": "Join Message",
 	"description": "Sends a message to players joining the server.",
 	"authors": [
