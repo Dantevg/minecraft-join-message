@@ -34,12 +34,12 @@ public class JoinMessage implements ModInitializer {
 		ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
 			ServerPlayerEntity player = handler.getPlayer();
 			if (messages.welcome != null) {
-				player.sendMessage(Text.literal(messages.welcome).formatted(Formatting.GREEN));
+				player.sendMessage(Text.literal(" " + messages.welcome).formatted(Formatting.GREEN));
 			}
 			if (!messages.random.isEmpty()) {
 				Random random = new Random();
 				int randInt = random.nextInt(messages.random.size());
-				player.sendMessage(Text.literal(messages.random.get(randInt)).formatted(Formatting.GREEN, Formatting.ITALIC));
+				player.sendMessage(Text.literal(" " + messages.random.get(randInt)).formatted(Formatting.DARK_GREEN));
 			}
 			LOGGER.info("Sent join message to {}", handler.getPlayer().getName());
 		});
