@@ -41,7 +41,7 @@ public class JoinMessage implements ModInitializer {
 				int randInt = random.nextInt(messages.random.size());
 				player.sendMessage(Text.literal(" " + messages.random.get(randInt)).formatted(Formatting.DARK_GREEN));
 			}
-			LOGGER.info("Sent join message to {}", handler.getPlayer().getName());
+			LOGGER.info("Sent join message to {}", handler.getPlayer().getName().asTruncatedString(99));
 		});
 
 		LOGGER.info("Join Message initialized.");

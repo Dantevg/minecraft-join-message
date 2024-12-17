@@ -16,7 +16,6 @@ public class Config {
     }
 
     public static void createConfig() {
-        configFile = new File(FabricLoader.getInstance().getConfigDir().toFile(), JoinMessage.MOD_ID + ".json");
         try {
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
             InputStream inputStream = classLoader.getResourceAsStream("default_config.json");
@@ -34,8 +33,9 @@ public class Config {
     }
 
     public static Messages loadConfig() {
+        configFile = new File(FabricLoader.getInstance().getConfigDir().toFile(), JoinMessage.MOD_ID + ".json");
         try {
-            if (configFile == null) {
+            if (!configFile.exists()) {
                 createConfig();
             }
 
